@@ -10,13 +10,12 @@
 
 <body>
     <div id='app'>
-        <h1>Email List</h1>
-        <ol>
-            <li v-if="emailAdress">
-                {{emailAdress}}
 
-            </li>
+        <h1>Email List</h1>
+        <ol v-if="listEmails.length === allEmails">
+            <li v-for="(email,i) in listEmails">{{ email }}</li>
         </ol>
+
     </div>
     <!-- Development only cdn, disable in production -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
